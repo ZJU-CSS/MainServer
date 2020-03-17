@@ -1,0 +1,27 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/deckgl/node_modules
+/deckgl/.pnp
+/deckgl/.pnp.js
+
+# testing
+/deckgl/coverage
+
+# production
+/deckgl/build
+
+# misc
+/deckgl/.DS_Store
+/deckgl/.env.local
+/deckgl/.env.development.local
+/deckgl/.env.test.local
+/deckgl/.env.production.local
+
+/deckgl/npm-debug.log*
+/deckgl/yarn-debug.log*
+/deckgl/yarn-error.log*
+
+#back
+/back/venv
+/back/.idea
