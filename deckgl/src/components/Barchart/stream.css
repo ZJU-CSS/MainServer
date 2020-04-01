@@ -1,0 +1,41 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+    /*background-color:black*/
+}
+svg{
+
+    display: block;
+    margin:auto
+
+}
+.area-label {
+    font-family: sans-serif;
+    fill-opacity: 0.7;
+    fill: white;
+}
+path:hover {
+    fill-opacity: 1;
+    fill:#FFFFFF;
+}
+path {
+    fill-opacity: 0.8;
+    stroke-width: 0.5;
+}
+text {
+    pointer-events: none;
+    fill : #FFFFFF
+}
+
+.tick text {
+    /*display: none;*/
+    fill:#FFFFFF;
+}
+.tick line{
+    stroke: #C1BAA9;
+    stroke-width: 2px;
+}
+.axis-label {
+   fill: #FFFFFF;
+}
+

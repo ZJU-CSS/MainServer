@@ -22,7 +22,16 @@ CORS(app, supports_credentials=True)
 
 @app.route('/data/<time>')
 def get_data(time):
-    result={}
+
     # for i in dic[time]:
-    print(len(dic[time]))
-    return jsonify([route for route in dic[time]])
+    result=[]
+
+    list = time.split(':')
+    if len(list)==1:
+        list.append(int(list[0]))
+    if len(list) > 1:
+        for i in range(int(list[0]),int(list[1])+1,1):
+            for route in dic[str(i)+':00:00']:
+                result.append(route+','+str(i))
+    # print(len(dic[time]))
+    return jsonify(result)

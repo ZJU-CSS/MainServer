@@ -43,7 +43,7 @@ const TickBar = styled('div', {
     maxWidth: '80vw'
 });
 
-const ANIMATION_SPEED = 100;
+const ANIMATION_SPEED = 2;
 let count=0;
 
 export default class sliderCovid extends PureComponent {

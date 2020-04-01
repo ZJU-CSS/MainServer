@@ -44,7 +44,7 @@ const TickBar = styled('div', {
     maxWidth: '80vw'
 });
 
-const ANIMATION_SPEED = 1;
+const ANIMATION_SPEED = 10;
 
 export default class sliderTraffic extends PureComponent {
     constructor(props) {
