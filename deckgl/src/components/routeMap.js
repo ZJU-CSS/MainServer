@@ -1670,6 +1670,7 @@ export default class RouteMap extends Component {
                                                 this.setState({
                                                     block:true,
                                                     options:[{label:"路障检测",id:"block"}],
+                                                    time:45466,
                                                     showPredict:false,
                                                     showRoute:false
                                                 })
