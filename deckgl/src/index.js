@@ -9,6 +9,8 @@ import AirQuality from "./components/airQuality";
 import {StreamG} from "./components/streamgraph/main";
 import {BarG} from "./components/Barchart/main";
 
+import {Panel} from "./components/panel/control";
+
 import LineChart from "./components/lineChart/main";
 
 const map = document.getElementById("map");
@@ -36,6 +38,9 @@ function Getpage(){
                 </Route>
                 <Route path="/line">
                     <LineChart />
+                </Route>
+                <Route path="/control">
+                    <Panel/>
                 </Route>
             </Switch>
         </Router>

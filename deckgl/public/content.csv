@@ -1,0 +1,6 @@
+﻿name,path
+"MIC",file://mypassport/Storage/cityhappiness/workflow/MIC.html
+ML,file://mypassport/Storage/cityhappiness/workflow/ML.html
+DTW,file://mypassport/Storage/cityhappiness/workflow/DTW.html
+news,file://mypassport/Storage/cityhappiness/workflow/news.html
+ITS,http://192.168.0.161:6666

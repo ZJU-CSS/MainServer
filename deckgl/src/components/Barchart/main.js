@@ -74,7 +74,7 @@ export function BarG(){
 
 
 
-    return <Fragment>
+    return <div className={'bar'}>
         <svg height={height} width={width}>
             <g transform={`translate(${margin.left},${margin.top})`}>
                 <g transform={`translate(${innerWidth + 60}, 60)`}>
@@ -138,5 +138,5 @@ export function BarG(){
                 </text>
             </g>
         </svg>
-    </Fragment>
+    </div>
 }
