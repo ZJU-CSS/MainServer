@@ -21,7 +21,8 @@
     "react-map-gl": "^5.2.3",
     "react-router": "^5.1.2",
     "react-scripts": "3.4.0",
-    "styletron-react": "^5.2.7"
+    "styletron-react": "^5.2.7",
+
   },
   "scripts": {
 

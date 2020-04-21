@@ -2,6 +2,7 @@ from flask import Flask
 import pandas as pd
 from flask import jsonify
 from flask_cors import *
+import socket
 # data=[]
 # with open('didi_data_feature.csv') as csvfile:
 #     csv_reader=csv.reader(csvfile)
@@ -35,3 +36,11 @@ def get_data(time):
                 result.append(route+','+str(i))
     # print(len(dic[time]))
     return jsonify(result)
+
+if __name__=='__main__':
+
+    hostname = socket.gethostname()
+    # 获取本机IP1111
+    ip = socket.gethostbyname(hostname)
+    print(ip)
+    app.run(host=ip,port=8888,debug=False)

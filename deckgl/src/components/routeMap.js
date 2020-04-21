@@ -549,8 +549,10 @@ function getArea(){
 function getRoute(time) {
     return new Promise(resolve => {
         // var gets = [];
-        d3.json('http://localhost:5000/data/'+time).then(function (data) {
-            var count = 0;
+        // d3.json('http://localhost:5000/data/'+time).then(function (data) {
+        d3.json('http://192.168.0.161:8888/data/'+time).then(function (data) {
+
+                var count = 0;
             d3.json('./10.json').then(function (map) {
                 // console.log('map:',map)
                 var routeData=[];
