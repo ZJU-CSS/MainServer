@@ -58,10 +58,13 @@ export default class sliderTraffic extends PureComponent {
         this._toggle = this._toggle.bind(this);
         this._animationFrame = null;
     }
-
-    componentWillUnmount() {
-        cancelAnimationFrame(this._animationFrame);
+    componentDidMount() {
+        // this._animate()
     }
+
+    // componentWillUnmount() {
+    //     cancelAnimationFrame(this._animationFrame);
+    // }
 
     _toggle() {
         cancelAnimationFrame(this._animationFrame);
@@ -81,8 +84,6 @@ export default class sliderTraffic extends PureComponent {
         this.props.onChange({
             value: [value[0],newValue]
         });
-
-
         this._animationFrame = requestAnimationFrame(this._animate);
     }
 
@@ -125,6 +126,7 @@ export default class sliderTraffic extends PureComponent {
 
                     <Container>
                         <Button
+                            id={'start'}
                             shape={SHAPE.round}
                             size={SIZE.compact}
                             disabled={!isButtonEnabled}

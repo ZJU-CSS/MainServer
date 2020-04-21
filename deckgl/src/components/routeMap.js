@@ -817,7 +817,7 @@ function getBlockRoute(){
 
 //设置预测流量数据
 function setPredictData(hour){
-    console.log('org',predict_origin)
+    console.log('org',predict_origin);
     let data=[];
     let tmp=predict_origin.get(parseInt(hour));
     console.log('tmp',tmp)
@@ -874,8 +874,9 @@ export default class RouteMap extends Component {
             pre_des:[],
             real_org:[],
             real:false,
-            showPredict:false,
-            blockIcon:[]
+            showPredict:true,
+            blockIcon:[],
+            showRoute:true
 
 
         };
@@ -900,6 +901,12 @@ export default class RouteMap extends Component {
                 blockRoute:blockRoute
             })
         }.bind(this) )
+
+
+        let button=document.getElementById('start')
+        console.log(button)
+
+        setTimeout(()=>{button.click()},1200)
 
         // getBlockData();
 
