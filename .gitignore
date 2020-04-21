@@ -9,7 +9,7 @@
 #/deckgl/coverage
 
 # production
-#/deckgl/build
+/deckgl/build
 
 # misc
 /deckgl/.DS_Store
