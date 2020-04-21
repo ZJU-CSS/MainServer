@@ -101,10 +101,10 @@ export function Panel() {
             <Button variant="contained" color="primary" value={6} onClick={send}>
                 6号机(融合)
             </Button>
-                <Button variant="contained" color="primary" value={6} onClick={send}>
+                <Button variant="contained" color="primary" value={7} onClick={send}>
                     7号机(玻璃)
                 </Button>
-                <Button variant="contained" color="primary" value={6} onClick={send}>
+                <Button variant="contained" color="primary" value={8} onClick={send}>
                     8号机(窗户)
                 </Button>
             </div>
