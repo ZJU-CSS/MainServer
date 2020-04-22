@@ -20,7 +20,7 @@ let content={}
 function readipData(){
 
     return new Promise(resolve => {
-        d3.csv('./panel.csv').then(d=>{
+        d3.csv('https://raw.githubusercontent.com/HOOLoLo/ITS/master/deckgl/public/panel.csv').then(d=>{
             d.map(x=>{
                 ip[x['no']]=x['ip']
             })
