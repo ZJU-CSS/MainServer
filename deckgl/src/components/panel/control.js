@@ -64,7 +64,7 @@ export function Panel() {
 
         const http=new XMLHttpRequest()
 
-        const url=ip[event.currentTarget.value]+'/'+value;
+        const url=ip[event.currentTarget.value]+'/url/'+value;
         console.log(url)
         http.open('GET',url)
         http.send()
