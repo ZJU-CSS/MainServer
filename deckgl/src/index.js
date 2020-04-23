@@ -40,7 +40,7 @@ function Getpage(){
                     {/*<div className={'covid19'}>*/}
                         <ul >
                         <li><video src={'./covid.mp4'} autoPlay={'true'} style={{width:'100%'}}/></li>
-                        <li><LineChart /></li>
+                        {/*<li><LineChart /></li>*/}
                         </ul>
                     {/*</div>*/}
 

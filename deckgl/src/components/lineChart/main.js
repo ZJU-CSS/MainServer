@@ -364,7 +364,7 @@ export default class App extends Component{
 
 
          return <div className={'line'}>
-             <svg >
+             <svg width={width} height={height}>
                  <g transform={`translate(${margin.left},${margin.top})`}>
                      <g transform={`translate(${innerWidth + 60}, 60)`}>
                          <text x={35} y={-25} className="axis-label" textAnchor="middle" >
