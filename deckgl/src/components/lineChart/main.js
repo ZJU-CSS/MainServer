@@ -2,7 +2,7 @@ import * as d3 from 'd3'
 import React, {useState, useCallback, useEffect, Fragment, Component} from 'react';
 
 import {ColorLegend} from "./ColorLegend";
-
+import './line.css'
 const width = 960;
 const height = 500;
 const margin = { top: 20, right: 200, bottom: 65, left: 150 };
@@ -51,7 +51,7 @@ const yAxisGenerator = d3.axisLeft()
     let lineData=[]
     function getCovid() {
         return new Promise(resolve => {
-            d3.csv('./covid/time_series_covid19_confirmed_global.csv').then(d=>{
+            d3.csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv').then(d=>{
             d.map((i,index)=>{
                 for(let k in i){
                     let t=new Date(k)
@@ -364,7 +364,7 @@ export default class App extends Component{
 
 
          return <div className={'line'}>
-             <svg height={height} width={width}>
+             <svg >
                  <g transform={`translate(${margin.left},${margin.top})`}>
                      <g transform={`translate(${innerWidth + 60}, 60)`}>
                          <text x={35} y={-25} className="axis-label" textAnchor="middle" >

@@ -12,7 +12,7 @@ import {BarG} from "./components/Barchart/main";
 import {Panel} from "./components/panel/control";
 
 import LineChart from "./components/lineChart/main";
-
+import './index.css'
 const map = document.getElementById("map");
 function Getpage(){
     return (
@@ -27,7 +27,7 @@ function Getpage(){
                 <Route path="/airquality">
                     <AirQuality />
                 </Route>
-                <Route path="/city">
+                <Route path="/bubble">
                     <City />
                 </Route>
                 <Route path="/stream">
@@ -37,7 +37,13 @@ function Getpage(){
                     <BarG />
                 </Route>
                 <Route path="/line">
-                    <LineChart />
+                    {/*<div className={'covid19'}>*/}
+                        <ul >
+                        <li><video src={'./covid.mp4'} autoPlay={'true'} style={{width:'100%'}}/></li>
+                        <li><LineChart /></li>
+                        </ul>
+                    {/*</div>*/}
+
                 </Route>
                 <Route path="/control">
                     <Panel/>

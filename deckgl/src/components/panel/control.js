@@ -110,7 +110,7 @@ export function Panel() {
 
         console.log(event.currentTarget)
 
-        const http=new XMLHttpRequest()
+        const http=new XMLHttpRequest();
 
         const url=ip[event.currentTarget.value]+'/url/'+value;
         console.log(url)

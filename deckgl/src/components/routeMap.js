@@ -863,7 +863,7 @@ export default class RouteMap extends Component {
         super(props);
          // const [value, setValue] = React.useState([0]);
         this.state = {
-            time: 0,
+            time: 18000,
             hour:-1,
             depV:false,
             desV:false,

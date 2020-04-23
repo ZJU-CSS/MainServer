@@ -1,0 +1,9 @@
+ul {
+    display: inline-block;
+    /*overflow: hidden;*/
+}
+li{
+    font-size: 0;
+    width: 50%;
+    float: left;
+}
