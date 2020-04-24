@@ -210,8 +210,11 @@ export function Panel() {
                     })
                 }
                 </RadioGroup>
-                <Button variant="contained" color="secondary"  value={'up'} onClick={sendVolume}> 增大音量</Button>
-                <Button variant="contained" color="secondary"  value={'down'} onClick={sendVolume} > 减小音量</Button>
+                <div className={classes.root}>
+                    <Button variant="contained" color="secondary"  value={'up'} onClick={sendVolume}> 增大音量</Button>
+                    <Button variant="contained" color="secondary"  value={'down'} onClick={sendVolume} > 减小音量</Button>
+                </div>
+
 
             </FormControl>
 
