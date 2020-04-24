@@ -84,6 +84,7 @@ let p=setK();
 let p2=readipData()
 export function Panel() {
     const [value, setValue] = React.useState('MIC');
+    const [ipValue,setIP]=React.useState('1号机(MIC)');
 
     const[keys,setKeys]=React.useState(['wait']);
     const[ipName,setName]=React.useState(['wait']);
@@ -106,6 +107,11 @@ export function Panel() {
         setValue(event.target.value);
     }
 
+    function handleIPChoese(event) {
+        setIP(event.target.value);
+    }
+
+
     function send(event) {
 
         console.log(event.currentTarget)
@@ -116,7 +122,14 @@ export function Panel() {
         console.log(url)
         http.open('GET',url)
         http.send()
+    }
 
+    function sendVolume(event){
+        const http=new XMLHttpRequest();
+        console.log(event.currentTarget.value)
+        const url=ip[ipValue]+'/volume/'+event.currentTarget.value;
+        http.open('GET',url)
+        http.send()
     }
 
     // if(!keys){
@@ -153,7 +166,6 @@ export function Panel() {
                     {/*<FormControlLabel value={d} control={<Radio />} label={d}  />*/}
                 </RadioGroup>
                 <div className={classes.root}>
-
                     {
                         ipName.map(((value, index) => {
                             return(
@@ -188,6 +200,19 @@ export function Panel() {
                     {/*    8号机(窗户)*/}
                     {/*</Button>*/}
                 </div>
+                <RadioGroup aria-label="ipLabel" name="ipLabel" value={ipValue} onChange={handleIPChoese}>
+                {
+                    ipName.map((value,index)=>{
+                        console.log('d',value);
+                        return(
+                            <FormControlLabel key={index} value={value} control={<Radio />} label={value}  />
+                        )
+                    })
+                }
+                </RadioGroup>
+                <Button variant="contained" color="secondary"  value={'up'} onClick={sendVolume}> 增大音量</Button>
+                <Button variant="contained" color="secondary"  value={'down'} onClick={sendVolume} > 减小音量</Button>
+
             </FormControl>
 
         );
