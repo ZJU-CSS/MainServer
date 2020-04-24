@@ -131,6 +131,14 @@ export function Panel() {
         http.open('GET',url)
         http.send()
     }
+    function sendScroll(event) {
+        const http=new XMLHttpRequest();
+        console.log(event.currentTarget.value)
+        const url=ip[ipValue]+'/scroll/'+event.currentTarget.value;
+        http.open('GET',url)
+        http.send()
+
+    }
 
     // if(!keys){
     //     console.log('keys')
@@ -214,7 +222,10 @@ export function Panel() {
                     <Button variant="contained" color="secondary"  value={'up'} onClick={sendVolume}> 增大音量</Button>
                     <Button variant="contained" color="secondary"  value={'down'} onClick={sendVolume} > 减小音量</Button>
                 </div>
-
+                <div className={classes.root}>
+                    <Button variant="contained" color="secondary"  value={'front'} onClick={sendScroll}> 向前滑动</Button>
+                    <Button variant="contained" color="secondary"  value={'back'} onClick={sendScroll} > 向后滑动</Button>
+                </div>
 
             </FormControl>
 
