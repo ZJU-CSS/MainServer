@@ -1538,6 +1538,7 @@ export default class RouteMap extends Component {
                 <StyletronProvider value={engine}>
                     <BaseProvider theme={LightTheme}>
                         <SliderTraffic
+
                             min={0}
                             max={86400}
                             value={[0,this.state.time]}
@@ -1593,110 +1594,110 @@ export default class RouteMap extends Component {
                                 //console.log('value:',value)
                             }}
                         />
-                     <SelectContainer>
-                        <Select id={'area'}
-                        options={[
-                            {label:"出发区域",id:'dep_polygon'},
-                            {label:"到达区域",id:'des_polygon'},
-                            { label: "隐藏", id: "" },
+                {/*     <SelectContainer>*/}
+                {/*        <Select id={'area'}*/}
+                {/*        options={[*/}
+                {/*            {label:"出发区域",id:'dep_polygon'},*/}
+                {/*            {label:"到达区域",id:'des_polygon'},*/}
+                {/*            { label: "隐藏", id: "" },*/}
 
-                        ]}
-                        value={this.state.area}
-                        placeholder="显示区域"
-                        // onChange={params => setValue(params.value)}
-                        size={SIZE.mini}
-                        onChange={params=> {
-                            // console.log('params:',params);
-                            if(params.option!=null){
+                {/*        ]}*/}
+                {/*        value={this.state.area}*/}
+                {/*        placeholder="显示区域"*/}
+                {/*        // onChange={params => setValue(params.value)}*/}
+                {/*        size={SIZE.mini}*/}
+                {/*        onChange={params=> {*/}
+                {/*            // console.log('params:',params);*/}
+                {/*            if(params.option!=null){*/}
 
 
-                                if(params.option.id=='dep_polygon'){
-                                    console.log()
-                                    this.setState({
-                                        depPolygon:depPolygon,
-                                        depV:true,
-                                        desV:false,
-                                        area:[{label:"出发区域",id:'dep_polygon'}]
-                                    })
-                                }
-                                else if(params.option.id=='des_polygon'){
-                                    console.log('desPolygon',this.state.desPolygon)
-                                    this.setState({
-                                        desPolygon:desPolygon,
-                                        desV:true,
-                                        depV:false,
-                                        area:[{label:"到达区域",id:'des_polygon'}]
-                                    })
-                                }
-                                else{
-                                    this.setState({
-                                        desV:false,
-                                        depV:false,
-                                        area:[{ label: "隐藏", id: "" }]
-                                    })
-                                }
-                            }
-                            else{
-                                this.setState({
-                                    area:[],
-                                    desV:false,
-                                    depV:false,
-                                })
-                            }
+                {/*                if(params.option.id=='dep_polygon'){*/}
+                {/*                    console.log()*/}
+                {/*                    this.setState({*/}
+                {/*                        depPolygon:depPolygon,*/}
+                {/*                        depV:true,*/}
+                {/*                        desV:false,*/}
+                {/*                        area:[{label:"出发区域",id:'dep_polygon'}]*/}
+                {/*                    })*/}
+                {/*                }*/}
+                {/*                else if(params.option.id=='des_polygon'){*/}
+                {/*                    console.log('desPolygon',this.state.desPolygon)*/}
+                {/*                    this.setState({*/}
+                {/*                        desPolygon:desPolygon,*/}
+                {/*                        desV:true,*/}
+                {/*                        depV:false,*/}
+                {/*                        area:[{label:"到达区域",id:'des_polygon'}]*/}
+                {/*                    })*/}
+                {/*                }*/}
+                {/*                else{*/}
+                {/*                    this.setState({*/}
+                {/*                        desV:false,*/}
+                {/*                        depV:false,*/}
+                {/*                        area:[{ label: "隐藏", id: "" }]*/}
+                {/*                    })*/}
+                {/*                }*/}
+                {/*            }*/}
+                {/*            else{*/}
+                {/*                this.setState({*/}
+                {/*                    area:[],*/}
+                {/*                    desV:false,*/}
+                {/*                    depV:false,*/}
+                {/*                })*/}
+                {/*            }*/}
 
-                        }}
-                    />
+                {/*        }}*/}
+                {/*    />*/}
 
-                </SelectContainer>
-                        <SelectContainer2>
-                            <Select id={'option'}
-                                    options={[
-                                        {label:"显示轨迹",id:'route'},
-                                        {label:'预测流量',id:"predict"},
-                                        {label:"实际流量",id:'real'},
-                                        {label:'路障检测',id:'block'}
-                                    ]}
-                                    value={this.state.options}
-                                    placeholder={'选择服务'}
-                                    size={SIZE.mini}
-                                    onChange={ params=>{
-                                        if (params.option!==null){
-                                            if(params.option.id==='predict'){
-                                                this.setState({
-                                                    real:false,
-                                                    options:[{label:"预测流量",id:"predict"}],
-                                                    showPredict:true
-                                                })
-                                            }
-                                            else if(params.option.id==='real'){
-                                                this.setState({
-                                                    real:true,
-                                                    options:[{label:"实际流量",id:"real"}],
-                                                    showPredict:true
-                                                })
-                                            }
-                                            else if(params.option.id==='block'){
-                                                this.setState({
-                                                    block:true,
-                                                    options:[{label:"路障检测",id:"block"}],
-                                                    time:45466,
-                                                    showPredict:false,
-                                                    showRoute:false
-                                                })
+                {/*</SelectContainer>*/}
+                {/*        <SelectContainer2>*/}
+                {/*            <Select id={'option'}*/}
+                {/*                    options={[*/}
+                {/*                        {label:"显示轨迹",id:'route'},*/}
+                {/*                        {label:'预测流量',id:"predict"},*/}
+                {/*                        {label:"实际流量",id:'real'},*/}
+                {/*                        {label:'路障检测',id:'block'}*/}
+                {/*                    ]}*/}
+                {/*                    value={this.state.options}*/}
+                {/*                    placeholder={'选择服务'}*/}
+                {/*                    size={SIZE.mini}*/}
+                {/*                    onChange={ params=>{*/}
+                {/*                        if (params.option!==null){*/}
+                {/*                            if(params.option.id==='predict'){*/}
+                {/*                                this.setState({*/}
+                {/*                                    real:false,*/}
+                {/*                                    options:[{label:"预测流量",id:"predict"}],*/}
+                {/*                                    showPredict:true*/}
+                {/*                                })*/}
+                {/*                            }*/}
+                {/*                            else if(params.option.id==='real'){*/}
+                {/*                                this.setState({*/}
+                {/*                                    real:true,*/}
+                {/*                                    options:[{label:"实际流量",id:"real"}],*/}
+                {/*                                    showPredict:true*/}
+                {/*                                })*/}
+                {/*                            }*/}
+                {/*                            else if(params.option.id==='block'){*/}
+                {/*                                this.setState({*/}
+                {/*                                    block:true,*/}
+                {/*                                    options:[{label:"路障检测",id:"block"}],*/}
+                {/*                                    time:45466,*/}
+                {/*                                    showPredict:false,*/}
+                {/*                                    showRoute:false*/}
+                {/*                                })*/}
 
-                                            }
-                                            else if(params.option.id==='route'){
-                                                this.setState({
-                                                    block:false,
-                                                    options:[{label:"显示轨迹",id:"route"}],
-                                                    showRoute:true,
+                {/*                            }*/}
+                {/*                            else if(params.option.id==='route'){*/}
+                {/*                                this.setState({*/}
+                {/*                                    block:false,*/}
+                {/*                                    options:[{label:"显示轨迹",id:"route"}],*/}
+                {/*                                    showRoute:true,*/}
 
-                                                })
-                                            }
-                                        }
-                                    }}
-                            />
-                        </SelectContainer2>
+                {/*                                })*/}
+                {/*                            }*/}
+                {/*                        }*/}
+                {/*                    }}*/}
+                {/*            />*/}
+                {/*        </SelectContainer2>*/}
                     </BaseProvider>
                 </StyletronProvider>
 
