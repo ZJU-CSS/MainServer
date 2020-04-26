@@ -139,6 +139,12 @@ export function Panel() {
         http.send()
 
     }
+    function sendOpenChrome(event) {
+        const http=new XMLHttpRequest();
+        const url=ip[ipValue]+'/openChrome';
+        http.open('GET',url);
+        http.send()
+    }
 
     // if(!keys){
     //     console.log('keys')
@@ -148,6 +154,7 @@ export function Panel() {
     return (
             <FormControl component="fieldset">
                 <FormLabel component="legend">Content</FormLabel>
+
                 <RadioGroup aria-label="content" name="content" value={value} onChange={handleChange}>
                     {/*{*/}
                     {/*    ()=>{*/}
@@ -225,6 +232,10 @@ export function Panel() {
                 <div className={classes.root}>
                     <Button variant="contained" color="secondary"  value={'front'} onClick={sendScroll}> 向前滑动</Button>
                     <Button variant="contained" color="secondary"  value={'back'} onClick={sendScroll} > 向后滑动</Button>
+                </div>
+                <div className={classes.root}>
+                    <Button variant="contained" color="secondary"  value={'front'} onClick={sendOpenChrome}> 打开浏览器</Button>
+
                 </div>
 
             </FormControl>
