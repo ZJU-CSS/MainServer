@@ -147,7 +147,7 @@ export function Panel() {
     }
 
     function shutdown() {
-        let message=confirm('确定关闭'+ipValue+'吗？')
+        let message=window.confirm('确定关闭'+ipValue+'吗？')
         if (message===true){
             const http=new XMLHttpRequest();
             const url=ip[ipValue]+'/shutdown';
