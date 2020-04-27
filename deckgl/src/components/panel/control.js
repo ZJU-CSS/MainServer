@@ -146,6 +146,16 @@ export function Panel() {
         http.send()
     }
 
+    function shutdown() {
+        let message=confirm('确定关闭'+ipValue+'吗？')
+        if (message===true){
+            const http=new XMLHttpRequest();
+            const url=ip[ipValue]+'/shutdown';
+            http.open('GET',url);
+            http.send()
+        }
+        else return
+    }
     // if(!keys){
     //     console.log('keys')
     //     return <div>wait</div>
@@ -234,9 +244,10 @@ export function Panel() {
                     <Button variant="contained" color="secondary"  value={'back'} onClick={sendScroll} > 向后滑动</Button>
                 </div>
                 <div className={classes.root}>
-                    <Button variant="contained" color="secondary"  value={'front'} onClick={sendOpenChrome}> 打开浏览器</Button>
-
+                    <Button variant="contained" color="secondary" onClick={sendOpenChrome}> 打开浏览器</Button>
+                    <Button variant="contained" color="secondary"  onClick={shutdown}> 关机</Button>
                 </div>
+
 
             </FormControl>
 
