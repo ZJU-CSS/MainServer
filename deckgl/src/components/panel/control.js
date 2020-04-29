@@ -156,6 +156,19 @@ export function Panel() {
         }
         else return
     }
+
+    function openAllChrome(){
+        for(let prop in ip){
+            if(ip[prop]){
+                console.log(ip[prop])
+                const http=new XMLHttpRequest();
+                const url=ip[prop]+'/openChrome';
+                http.open('GET',url);
+                http.send()
+            }
+        }
+    }
+
     // if(!keys){
     //     console.log('keys')
     //     return <div>wait</div>
@@ -178,7 +191,11 @@ export function Panel() {
             <FormControl component="fieldset">
                 <FormLabel component="legend">Content</FormLabel>
 
-
+                <div className={classes.root}>
+                    <Button variant="contained" color="primary"  onClick={send} >
+                        打开所有浏览器
+                    </Button>
+                </div>
 
                 <RadioGroup aria-label="content" name="content" value={value} onChange={handleChange}>
                     {/*{*/}
