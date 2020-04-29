@@ -155,7 +155,7 @@ const INITIAL_VIEW_STATE = {
     latitude: 30.225901,
     // longitude:-74.00823,
     // latitude: 40.71351,
-    zoom: 12,
+    zoom: 12.4,
     pitch: 45,
     bearing: 0
 };
@@ -1387,7 +1387,7 @@ export default class RouteMap extends Component {
                 getColor: d => colorTable[d.color],
                 // getColor:[0,255,255,255],
                 opacity: 0.3,
-                widthMinPixels: 2,
+                widthMinPixels: 10,
                 rounded: true,
                 trailLength,
                 currentTime: this.state.time,
