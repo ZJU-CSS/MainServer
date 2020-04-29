@@ -192,7 +192,7 @@ export function Panel() {
                 <FormLabel component="legend">Content</FormLabel>
 
                 <div className={classes.root}>
-                    <Button variant="contained" color="primary"  onClick={send} >
+                    <Button variant="contained" color="primary"  onClick={openAllChrome} >
                         打开所有浏览器
                     </Button>
                 </div>
