@@ -161,9 +161,31 @@ export function Panel() {
     //     return <div>wait</div>
     // }
 
+    function startBackMusic() {
+        const http=new XMLHttpRequest();
+        const url=ip[ipValue]+'/openMusic';
+        http.open('GET',url);
+        http.send()
+    }
+    function stopBackMusic() {
+        const http=new XMLHttpRequest();
+        const url=ip[ipValue]+'/stopMusic';
+        http.open('GET',url);
+        http.send()
+    }
+
     return (
             <FormControl component="fieldset">
                 <FormLabel component="legend">Content</FormLabel>
+                <div className={classes.root}>
+                    <Button variant="contained" color="primary"  onClick={startBackMusic}>
+                        播放背景音乐
+                    </Button>
+                    <Button variant="contained" color="primary"  onClick={stopBackMusic}>
+                        停止背景音乐
+                    </Button>
+                </div>
+
 
                 <RadioGroup aria-label="content" name="content" value={value} onChange={handleChange}>
                     {/*{*/}
