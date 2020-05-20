@@ -12,7 +12,8 @@ import FormControl from "@material-ui/core/FormControl";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import FormLabel from "@material-ui/core/FormLabel";
-
+import {text} from "d3-request";
+import $ from "jquery"
 // let keys=[];
 let ip={}
 let content={}
@@ -169,6 +170,14 @@ export function Panel() {
         }
     }
 
+    function updateService() {
+        // const http=new XMLHttpRequest();
+        const url=ip[ipValue]+'/cmd/';
+        $.post(url,"copy file////Mypassport/Storage/content.csv . /Y",text)
+        // http.open('GET',url);
+        // http.send()
+    }
+
     // if(!keys){
     //     console.log('keys')
     //     return <div>wait</div>
@@ -279,7 +288,9 @@ export function Panel() {
                     <Button variant="contained" color="secondary" onClick={sendOpenChrome}> 打开浏览器</Button>
                     <Button variant="contained" color="secondary"  onClick={shutdown}> 关机</Button>
                 </div>
-
+                <div className={classes.root}>
+                    <Button variant="contained" color="secondary" onClick={updateService}> 更新服务</Button>
+                </div>
 
             </FormControl>
 

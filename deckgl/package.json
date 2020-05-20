@@ -15,7 +15,7 @@
     "baseui": "^9.60.0",
     "d3": "^5.15.0",
     "deck.gl": "^8.0.16",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-map-gl": "^5.2.3",
@@ -24,7 +24,6 @@
     "styletron-react": "^5.2.7"
   },
   "scripts": {
-
     "start": "set PORT=5555 Host=192.168.0.161&&react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
